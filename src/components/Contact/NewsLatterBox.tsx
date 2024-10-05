@@ -1,9 +1,31 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useState } from "react";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: ''
+  });
+
+  const [submitMessage, setSubmitMessage] = useState('Subscribe');
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      console.log(formData);
+      setSubmitMessage('Subscribed!');
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitMessage('There was an error subscribing. Please try again.');
+    }
+  };
 
   return (
     <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
@@ -13,28 +35,35 @@ const NewsLatterBox = () => {
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
         Join our newsletter to receive a variety of information, from new spot openings to fun problems of the month!
       </p>
-      <div>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
           placeholder="Enter your name"
           className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
         />
         <input
           type="email"
           name="email"
+          required
+          value={formData.email}
+          onChange={handleChange}
           placeholder="Enter your email"
           className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
         />
         <input
           type="submit"
-          value="Subscribe"
+          value={submitMessage}
           className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
         />
+
         <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
           We do not send spam. <span className="underline">Unsubscribe</span> at any time.
         </p>
-      </div>
+      </form>
 
       <div>
         <span className="absolute left-2 top-7">

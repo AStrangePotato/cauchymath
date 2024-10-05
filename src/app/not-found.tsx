@@ -3,9 +3,15 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Error Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Error Page for Startup Nextjs Template",
-  // other metadata
+  title: "404 Not Found | Cauchy Math Online Tutoring",
+  description: "Oops! The page you are looking for could not be found. Let us guide you back on track to your learning journey.",
+  keywords: "404, page not found, Cauchy Math, online tutoring, error page",
+  openGraph: {
+    title: "404 Error - Page Not Found | Cauchy Math Online Tutoring",
+    description: "It seems the page you were looking for is missing. Visit Cauchy Math Online Tutoring for quality math support and resources to help you succeed.",
+    url: "https://www.cauchymath.xyz",
+    type: "website",
+  },
 };
 
 const ErrorPage = () => {

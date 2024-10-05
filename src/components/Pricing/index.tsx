@@ -6,15 +6,15 @@ import PricingBox from "./PricingBox";
 const Pricing = () => {
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="container">
+      <div className="container px-12 md:px-24 mx-auto">
         <SectionTitle
           title="Simple and Affordable Pricing"
-          paragraph="We currently offer two classes, with flexible scheduling. Book a free trial today!"
+          paragraph="We currently offer two classes, with flexible scheduling. Classes are held online on Zoom, but in-person options are also available. Book a free trial today!"
           center
-          width="665px"
+          width="100%"
         />
 
-        <div className="w-3/4 mx-auto justify-center flex flex-row space-x-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-8 justify-center mt-12">
           <PricingBox
             packageName="Standard"
             price="20"

@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
     ),
     title: "Taught by Experts",
     paragraph:
-      "The teacher, Daniel Zhang is a long-time math competition champion, with a 99% average in honours-level mathematics courses.",
+      "The teacher, Daniel Zhang is a highly qualified tutor and has been working with students for over a year.",
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ const featuresData: Feature[] = [
     ),
     title: "One-on-one Tutoring",
     paragraph:
-      "Receive dedicated and personalized tutoring for in-depth explanations to any math concept.",
+      "Receive dedicated and personalized tutoring for in-depth explanations to any math concept or homework question you may have.",
   },
   {
     id: 1,

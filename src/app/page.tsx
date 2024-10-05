@@ -11,7 +11,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Cauchy Math Online Tutoring Service - Personalized Math Help",
   description: "Cauchy Math Tutoring offers expert online math tutoring for high school and college students. Personalized, affordable, and flexible math help, covering algebra, calculus, geometry, and more. Get one-on-one sessions with experienced math tutors today.",
-  keywords: "Cauchy Math, online math tutoring, math tutoring service, math help, algebra tutor, calculus tutoring, personalized math tutoring, high school math tutor, college math help, online math lessons, one-on-one math tutoring",
+  keywords: "Cauchy Math, online math tutoring, math tutoring service, math help, algebra tutor, calculus tutoring, personalized math tutoring, high school math tutor, college math help, online math lessons, one-on-one math tutoring, math tutor coquitlam, math tutor near me",
   openGraph: {
     title: "Cauchy Math Online Tutoring - Expert Math Help for Students",
     description: "Find personalized online math tutoring at Cauchy Math Tutoring Service. Our experienced tutors are here to help you excel in algebra, calculus, and beyond.",

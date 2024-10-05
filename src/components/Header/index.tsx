@@ -2,22 +2,43 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
+import { X } from "react-feather";
+
 const Header = () => {
-  // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const [showBanner, setShowBanner] = useState(false);
+  const headerRef = useRef(null);
+
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
 
   const usePathName = usePathname();
 
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      if (headerRef.current) {
+        setHeaderHeight(headerRef.current.offsetHeight);
+      }
+    };
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+
+    return () => {
+      window.removeEventListener('resize', updateHeaderHeight);
+    };
+  }, []);
+
   return (
     <>
       <header
+        ref={headerRef}
         className="header left-0 top-0 z-50 flex w-full items-center dark:bg-gray-dark dark:shadow-sticky-dark fixed bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
       >
         <div className="container">
@@ -101,6 +122,29 @@ const Header = () => {
           </div>
         </div>
       </header>
+      {showBanner && (
+      <div 
+        style={{ top: `${headerHeight - 3}px` }}
+        className="absolute w-full z-40 bg-gradient-to-r from-indigo-400 to-purple-400 dark:from-indigo-600 dark:to-purple-600 text-white flex items-center px-4 py-3 transition-all duration-300 ease-in-out shadow-md"
+      >
+        <div className="flex-grow" />
+        <div className="flex items-center justify-center flex-grow">
+          <p className="text-sm font-medium">
+            🎓 Winter 2024 Registration Now Open! 
+            <Link href="/contact" className="ml-2 underline hover:text-indigo-200">Register Now</Link>
+          </p>
+        </div>
+        <div className="flex-grow flex justify-end">
+          <button 
+            onClick={() => setShowBanner(false)} 
+            className="focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded-full p-1"
+            aria-label="Close banner"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+    )}
     </>
   );
 };
