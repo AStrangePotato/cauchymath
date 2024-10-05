@@ -15,7 +15,7 @@ const Hero = () => {
                   Lost in math? Take the <span className="text-red-400 dark:text-emerald-300">Cauchy Path.</span>
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Cauchy Math offers personalized one-on-one math tutoring designed to help you succeed and achieve the grades you've always wanted.
+                  Cauchy Math offers personalized one-on-one math tutoring designed to help you succeed and achieve the grades you&apos;ve always wanted.
                   Learn with a top math contest champion in any topic.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
