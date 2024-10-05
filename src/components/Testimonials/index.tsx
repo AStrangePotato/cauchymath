@@ -2,13 +2,14 @@ import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 
+
 const testimonialData: Testimonial[] = [
   {
     id: 1,
     name: "Alice Nguyen",
     designation: "Contest Enthusiast",
     content:
-      "Cauchy's insights helped me truly understand the concept of convergence. It made complex ideas more accessible and actually enjoyable to learn. I never thought I'd be able to grasp series this clearly!",
+      "Cauchy Math helped me truly understand the concept of convergence. It made complex ideas more accessible and actually enjoyable to learn. I never thought I'd be able to grasp series this clearly!",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -17,7 +18,7 @@ const testimonialData: Testimonial[] = [
     name: "Ravi Patel",
     designation: "Math Honours Student",
     content:
-      "I struggled with limits until I started taking classes. The teacher is super encouraging and handsome. I can't believe the classes are this affordable!",
+      "I struggled with limits until I started taking classes. The teacher is super encouraging and kind. I can't believe the classes are this affordable!",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -26,7 +27,7 @@ const testimonialData: Testimonial[] = [
     name: "Emma Rodriguez",
     designation: "IB Student",
     content:
-      "Understanding Cauchy's theorems has made my physics courses so much easier. The clarity I gained from his approach to continuity and differentiability helped me connect the dots between math and physics.",
+      "Cauchy Math has made my physics courses so much easier. The clarity I gained from his approach to continuity and differentiability helped me connect the dots between math and physics.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
