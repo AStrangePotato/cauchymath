@@ -28,7 +28,7 @@ const RefundPolicy = () => {
         </p>
         <h2 className="text-2xl font-semibold mt-6 mb-4">Non-Refundable Situations</h2>
         <p>
-          Refunds are not available in the case that Cauchy Math believes the student is not actively trying to improve (not completing homework, academic dishonesty). We will inform the student's parent/guardian in this case, and work something out together.
+          Refunds are not available in the case that Cauchy Math believes the student is not actively trying to improve (not completing homework, academic dishonesty). We will inform the student&apos;s parent/guardian in this case, and work something out together.
         </p>
         <p className="mt-4">
           For more information or to request a refund, please contact us.
