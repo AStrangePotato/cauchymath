@@ -1,10 +1,31 @@
+"use client";
+
 const SharePost = () => {
+  // Replace with your post URL and description
+  const postUrl = "https://cauchymath.xyz/blog-details"; // Your post URL
+  const postTitle = "Check out this amazing post!"; // Title or description for the post
+
+  const shareOnTwitter = () => {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(postTitle)}&url=${encodeURIComponent(postUrl)}`;
+    window.open(twitterUrl, '_blank');
+  };
+
+  const shareOnFacebook = () => {
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`;
+    window.open(facebookUrl, '_blank');
+  };
+
+  const shareOnInstagram = () => {
+    alert("Instagram does not support direct sharing through URLs. Please copy the link to share manually.");
+  };
+
   return (
     <>
       <a
         href="#0"
-        aria-label="social-share"
-        className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gray-light text-body-color duration-300 hover:bg-primary hover:text-white dark:bg-gray-dark dark:hover:bg-primary sm:ml-3"
+        aria-label="Share on Instagram"
+        onClick={shareOnInstagram}
+        className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gray-light text-body-color duration-300 hover:bg-primary hover:text-white dark:bg-gray-dark dark:hover:bg-primary"
       >
         <svg
           width="16"
@@ -17,7 +38,8 @@ const SharePost = () => {
       </a>
       <a
         href="#0"
-        aria-label="social-share"
+        aria-label="Share on Twitter"
+        onClick={shareOnTwitter}
         className="mb-3 ml-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gray-light text-body-color duration-300 hover:bg-primary hover:text-white dark:bg-gray-dark dark:hover:bg-primary"
       >
         <svg
@@ -37,7 +59,8 @@ const SharePost = () => {
       </a>
       <a
         href="#0"
-        aria-label="social-share"
+        aria-label="Share on Facebook"
+        onClick={shareOnFacebook}
         className="mb-3 ml-3 inline-flex h-9 w-9 items-center justify-center rounded-sm bg-gray-light text-body-color duration-300 hover:bg-primary hover:text-white dark:bg-gray-dark dark:hover:bg-primary"
       >
         <svg
