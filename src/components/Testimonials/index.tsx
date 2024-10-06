@@ -6,32 +6,33 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Alice Nguyen",
+    name: "Alice",
     designation: "Contest Enthusiast",
     content:
-      "Cauchy Math helped me truly understand the concept of convergence. It made complex ideas more accessible and actually enjoyable to learn. I never thought I'd be able to grasp series this clearly!",
+      "Cauchy Math has been incredible in improving my contest scores. I’ve seen my performance improve dramatically - It’s made such a difference in my problem-solving abilities.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Ravi Patel",
+    name: "Ravi",
     designation: "Math Honours Student",
     content:
-      "I struggled with limits until I started taking classes. The teacher is super encouraging and kind. I can't believe the classes are this affordable!",
+      "Thanks to Cauchy Math, my understanding of limits and series has improved, and my scores have gone up significantly. The classes are affordable, and the teaching style makes even the toughest concepts manageable. I’ve never felt more confident about my studies!",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Emma Rodriguez",
+    name: "Emma",
     designation: "IB Student",
     content:
-      "Cauchy Math has made my physics courses so much easier. The clarity I gained from his approach to continuity and differentiability helped me connect the dots between math and physics.",
+      "My grades in math and physics have improved notably. The clarity of the lessons helped me connect math concepts to physics, and my overall scores reflect how much my understanding has grown.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
 ];
+
 
 const Testimonials = () => {
   return (
