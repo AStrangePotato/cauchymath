@@ -21,13 +21,22 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitMessage('');
 
-    try {
-      console.log(formData);
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    // Check if the response is successful
+    if (response.ok) {
       setSubmitMessage('Message sent!');
-    } catch (error) {
-      console.error('Error:', error);
+    } else {
+      console.error('Error:', response.status);
       setSubmitMessage('There was an error sending your message. Please try again.');
     }
+
 
     setIsSubmitting(false);
   };
@@ -118,7 +127,7 @@ const Contact = () => {
                 </div>
               </form>
               {submitMessage && (
-                <p className="mt-4 text-sm font-medium text-green-500">{submitMessage}</p>
+                <p className="mt-4 text-sm font-medium text-primary">{submitMessage}</p>
               )}
             </div>
           </div>

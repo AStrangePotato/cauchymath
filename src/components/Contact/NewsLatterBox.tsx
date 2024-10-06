@@ -18,12 +18,21 @@ const NewsLatterBox = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      console.log(formData);
+
+    const response = await fetch('/api/newsletter', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    // Check if the response is successful
+    if (response.ok) {
       setSubmitMessage('Subscribed!');
-    } catch (error) {
-      console.error('Error:', error);
-      setSubmitMessage('There was an error subscribing. Please try again.');
+    } else {
+      console.error('Error:', response.status);
+      setSubmitMessage('Error Subscribing');
     }
   };
 
