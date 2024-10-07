@@ -14,7 +14,7 @@ const AdminPage = () => {
 
   const fetchDashboardData = async () => {
     try {
-      const response = await fetch("/api/admin");
+      const response = await fetch("/api/admin", {cache: 'no-store'});
       if (response.ok) {
         const data = await response.json();
         console.log(data);
