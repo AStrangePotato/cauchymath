@@ -122,10 +122,10 @@ const Header = () => {
           </div>
         </div>
 
-        
+
         {showBanner && (
         <div 
-          style={{ top: `${headerHeight - 3}px` }}
+          style={{ top: `${headerHeight}px` }}
           className="absolute top-full w-full z-40 bg-gradient-to-r from-indigo-400 to-purple-400 dark:from-indigo-600 dark:to-purple-600 text-white flex items-center px-4 py-3 transition-all duration-300 ease-in-out shadow-md"
         >
           <div className="flex-grow" />
