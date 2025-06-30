@@ -121,30 +121,32 @@ const Header = () => {
             </div>
           </div>
         </div>
+
+        
+        {showBanner && (
+        <div 
+          style={{ top: `${headerHeight - 3}px` }}
+          className="absolute top-full w-full z-40 bg-gradient-to-r from-indigo-400 to-purple-400 dark:from-indigo-600 dark:to-purple-600 text-white flex items-center px-4 py-3 transition-all duration-300 ease-in-out shadow-md"
+        >
+          <div className="flex-grow" />
+          <div className="flex items-center justify-center flex-grow">
+            <p className="text-sm font-medium">
+              🎓 Free assessment class available! 
+              <Link href="/contact" className="ml-2 underline hover:text-indigo-200">Register Now</Link>
+            </p>
+          </div>
+          <div className="flex-grow flex justify-end">
+            <button 
+              onClick={() => setShowBanner(false)} 
+              className="focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded-full p-1"
+              aria-label="Close banner"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
+      )}
       </header>
-      {showBanner && (
-      <div 
-        style={{ top: `${headerHeight - 3}px` }}
-        className="absolute w-full z-40 bg-gradient-to-r from-indigo-400 to-purple-400 dark:from-indigo-600 dark:to-purple-600 text-white flex items-center px-4 py-3 transition-all duration-300 ease-in-out shadow-md"
-      >
-        <div className="flex-grow" />
-        <div className="flex items-center justify-center flex-grow">
-          <p className="text-sm font-medium">
-            🎓 Free assessment class available! 
-            <Link href="/contact" className="ml-2 underline hover:text-indigo-200">Register Now</Link>
-          </p>
-        </div>
-        <div className="flex-grow flex justify-end">
-          <button 
-            onClick={() => setShowBanner(false)} 
-            className="focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded-full p-1"
-            aria-label="Close banner"
-          >
-            <X className="h-5 w-5" />
-          </button>
-        </div>
-      </div>
-    )}
     </>
   );
 };
