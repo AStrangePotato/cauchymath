@@ -27,7 +27,7 @@ const Pricing = () => {
           </PricingBox>
           <PricingBox
             packageName="Contest"
-            price="30"
+            price="35"
             duration="hr"
             subtitle="A rigorous and challenging course diving deep into competition mathematics. Intended grade level: 8-10"
           >

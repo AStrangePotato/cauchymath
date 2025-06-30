@@ -28,9 +28,8 @@ export default function Home() {
       <Features />
       <TrustBanner />
       <About />
-      <Testimonials />
       <Pricing />
-      <Contact />
+      <Testimonials />
     </>
   );
 }

@@ -11,7 +11,7 @@ import { X } from "react-feather";
 const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
-  const [showBanner, setShowBanner] = useState(false);
+  const [showBanner, setShowBanner] = useState(true);
   const headerRef = useRef(null);
 
   const navbarToggleHandler = () => {
@@ -130,7 +130,7 @@ const Header = () => {
         <div className="flex-grow" />
         <div className="flex items-center justify-center flex-grow">
           <p className="text-sm font-medium">
-            🎓 Winter 2024 Registration Now Open! 
+            🎓 Free assessment class available! 
             <Link href="/contact" className="ml-2 underline hover:text-indigo-200">Register Now</Link>
           </p>
         </div>

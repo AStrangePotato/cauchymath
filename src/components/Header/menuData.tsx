@@ -6,11 +6,11 @@ const menuData: Menu[] = [
     title: "Home",
     path: "/",
   },
-  {
-    id: 33,
-    title: "Blog",
-    path: "/blog",
-  },
+  // {
+  //   id: 33,
+  //   title: "Blog",
+  //   path: "/blog",
+  // },
   {
     id: 3,
     title: "Register",
