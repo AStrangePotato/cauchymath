@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
-import Script from "next/script"; // ✅ import Script
+import Script from "next/script";
 import "../styles/index.css";
 import { Providers } from "./providers";
 
@@ -19,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head>
+      <head />
+      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+        {/* Load GA scripts after page interactive */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VJ0GNQMTSL"
           strategy="afterInteractive"
@@ -34,9 +36,7 @@ export default function RootLayout({
             });
           `}
         </Script>
-      </head>
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Analytics />
         <SpeedInsights />
         <Providers>
