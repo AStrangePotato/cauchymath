@@ -17,7 +17,7 @@ const Pricing = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 px-8 gap-8 justify-center mt-12">
           <PricingBox
             packageName="Standard"
-            price="20"
+            price="30"
             duration="hr"
             subtitle="Get help with any homework, and learn tips and tricks to ace your next test. Intended grade level: 9-12"
           >

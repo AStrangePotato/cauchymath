@@ -25,7 +25,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Elevate Your Skills and Scores"
-                paragraph="At Cauchy Math, we're dedicated to helping students excel in mathematics through personalized one-on-one tutoring. Whether you're struggling with homework or aiming to win math contests, our expert tutors are here to guide you every step of the way."
+                paragraph="At Cauchy Math, we're dedicated to helping students excel in mathematics through personalized one-on-one tutoring. Whether you're struggling with homework or aiming to win math contests, we are here to guide you every step of the way."
                 mb="44px"
               />
 
@@ -36,7 +36,7 @@ const AboutSectionOne = () => {
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Personalized Learning" />
-                    <List text="Expert Tutors" />
+                    <List text="Expert Tutoring" />
                     <List text="Homework Assistance" />
                   </div>
 
@@ -50,21 +50,24 @@ const AboutSectionOne = () => {
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
+              <div className="relative mx-auto max-w-[400px] lg:mr-0"> {/* reduced from 500px */}
                 <Image
-                  src="/images/about/about-image.svg"
+                  src="/images/about/about-image.png"
                   alt="Cauchy Math Tutoring"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                  width={400}   // scaled down
+                  height={466}  // keep aspect ratio proportional (571/665 → 400/466)
+                  className="mx-auto drop-shadow-three dark:hidden lg:mr-0"
                 />
                 <Image
-                  src="/images/about/about-image-dark.svg"
+                  src="/images/about/about-image-dark.png"
                   alt="Cauchy Math Tutoring"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                  width={400}
+                  height={466}
+                  className="mx-auto hidden drop-shadow-three dark:block lg:mr-0"
                 />
               </div>
             </div>
+
           </div>
         </div>
       </div>
