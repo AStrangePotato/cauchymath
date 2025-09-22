@@ -19,14 +19,14 @@ export async function POST(req) {
       to: ["danielzhang.936@gmail.com"],          // your email inbox
       subject: "LOCK IN",
       text: `
-A new student has registered for tutoring:
+      A new student has registered for tutoring:
 
-Name: ${name}
-Grade: ${grade}
-Phone: ${phone}
+      Name: ${name}
+      Grade: ${grade}
+      Phone: ${phone}
 
-Message:
-${message}
+      Message:
+      ${message}
       `,
     });
 
