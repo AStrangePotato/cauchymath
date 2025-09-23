@@ -42,7 +42,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <section id="register" className="overflow-hidden py-12 md:py-18 lg:py-20">
+    <section id="register" className="overflow-hidden py-6 md:py-8 lg:py-12">
       <div className="container">
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4 lg:w-8/12">

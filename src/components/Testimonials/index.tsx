@@ -6,7 +6,7 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Alice",
+    name: "Alina",
     designation: "Contest Enthusiast",
     content:
       "Cauchy Math has been incredible in improving my contest scores. I’ve seen my performance improve dramatically - It’s made such a difference in my problem-solving abilities.",
